@@ -1,0 +1,14 @@
+#
+# Ignore patterns in this directory and all subdirectories.
+#
+bootx64.efi
+bootia32.efi
+plopexec
+plopexec64
+plopexec.iso
+plopexec64.iso
+
+#
+# Ignore patterns relative to this .gitignore file's directory.
+#
+/kernel/linux-*.tar.xz
