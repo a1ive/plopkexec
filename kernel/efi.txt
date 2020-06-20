@@ -1,0 +1,9 @@
+Kernel Configuration:
+
+Processor type and features  --->
+    [*] EFI runtime service support 
+    [*]   EFI stub support
+    [ ]     EFI mixed-mode support
+    
+    
+also add Simple Framebuffer Support

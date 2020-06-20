@@ -1,0 +1,149 @@
+2019-09-14 Version 1.6 released by Elmar Hanlhofer
+
+    * Kernel update to 5.2.14
+      Intel LPSS enabled.
+      Additional file systems enabled.
+    
+    * Scanning more file systems. F2FS, NILFS2, NTFS, BTRFS, ReiserFS, XFS, HFS+.
+
+
+2019-06-18 Version 1.5 released by Elmar Hanlhofer
+
+    * 64 bit release added
+    
+    * EFI stubs support added, bootx64.efi.
+    
+    * Kernel update to 5.1.10, added device drivers, Simple framebuffer support.
+    
+    * Kexec tools update to 2.0.19
+
+    * Build scripts updated.
+        
+    * FB parameter on 64 bit to compile all frame buffer drivers into
+      PlopKexec.
+
+
+2016-08-14 Version 1.4.1 released by Elmar Hanlhofer
+
+    * Added leave info on Log View.
+
+
+
+2016-08-11 Version 1.4 released by Elmar Hanlhofer
+
+    * Added iso9660 to hard disk file system mount to support
+      hybrid ISOs.
+      
+    * Hotkey 's' for shutdown changed to 'p' power off.
+
+    * Added BusyBox.
+    
+    * Hotkey 's' for BusyBox shell.
+    
+    * Linux kernel update to 4.7.
+    
+    * Kexec update to 2.0.12.
+    
+    * Minor Kexec build script update.
+    
+    * plopkexec.iso is now a hybrid ISO.
+    
+    * Syslinux syntax: fix 'timeout' and 'default' command detection.
+    
+    * Force timeout to 5 seconds instead of 10 seconds.
+    
+    * Scan internal SD Card Readers.
+    
+    * TODO: Automatic use of supported file systems compiled
+            into the kernel, like Eugene https://github.com/eugenesan/chrubuntu-script/tree/master/plopkexec
+
+
+
+2016-02-08 Version 1.3 released by Elmar Hanlhofer
+
+    * plopkexec.cfg searching in root directories was disabled.
+      Now it is enabled.
+
+
+
+2016-01-19 Version 1.2 released by Elmar Hanlhofer
+
+    * Added Syslinux configuration keyword LINUX.
+
+
+
+2015-12-01 Version 1.1 released by Elmar Hanlhofer
+
+    * Compile on x64.
+      g++ flags added.
+      Precompiled kexec.
+
+    * Menu rewritten from scratch.
+
+    * Device scan rewritten from scratch.
+
+    * Log view rewritten from scratch.
+
+    * DMESG logs added.
+
+    * Boot entry edit mode added.
+
+    * Syslinux scan updated.
+
+    * LILO scan added.
+
+    * Grub scan added.
+
+    * Grub2 scan added (no support for variables).
+
+    * Kernel updated to 4.3.
+
+    * IDE hard disk scan added.
+
+    * Timeout lower than 10 seconds are forced to 10 seconds. To give time 
+      for detection.
+
+    * Build script updated.
+    
+    * Code cleanup.
+
+
+
+2015-01-17 Version 1.0 released by Elmar Hanlhofer
+
+    * Added scan for the configuration file plopkexec.cfg. Settings in this 
+      config file have the highest priority. The configuration commands are 
+      the same like syslinux config files.
+      
+    * Support for syslinux configuration TIMEOUT added.
+
+    * Support for syslinux configuration DEFAULT added.
+    
+    * Support for syslinux comments '#' added.
+    
+    * Starting kexec with -x parameter.
+    
+    * Kernel update to 3.18.2.
+    
+    * Added default modules: Ext3/4, USB 3.0, PC-Card, PCI Express
+      This means a bigger PlopKexec file. The new file is too big to fit on a 
+      floppy.
+      
+    * No floppy image. Users with floppys have to use version 0.3.
+    
+    * Keyboard keys Page Up/Down and Home/End added for menu navigation.
+    
+    * Mounting file systems in read-only mode.
+    
+    * Bugfix: Mount fails on Ext3/4 file systems.
+              Identified and fixed by Roland Kletzing.
+    
+    * Added a simple build script.
+    
+    * Removing ^ hotkey from menu label
+    
+    * Scan IDE CD/DVD drives
+
+
+
+2011-12-23 Version 0.3 released by Elmar Hanlhofer

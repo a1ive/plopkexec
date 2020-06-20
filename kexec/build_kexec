@@ -1,0 +1,27 @@
+#!/bin/sh
+
+
+KEXEC=kexec-tools-2.0.19
+
+echo "Building Kexec"
+
+CFLAGS="-march=i486 -static"
+CPPFLAGS="-march=i486 -static"
+
+arch=$(uname -m)
+if [ "$arch" == "x86_64" ]
+then
+    echo Unable to cross compile kexec for i486. Use the pre-compiled kexec.
+    cp -av kexec32 kexec
+    exit 0
+fi
+
+tar xfvJ $KEXEC.tar.xz &&
+cd $KEXEC &&
+if [ -f bootstrap ]
+then
+  ./bootstrap
+fi &&
+./configure -target=i486 && make &&
+cp -v build/sbin/kexec .. &&
+strip -s ../kexec

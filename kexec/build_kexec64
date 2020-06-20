@@ -1,0 +1,20 @@
+#!/bin/sh
+
+
+KEXEC=kexec-tools-2.0.19
+
+echo "Building Kexec"
+
+CFLAGS="-march=nocona -static"
+CPPFLAGS="-march=nocona -static"
+
+
+tar xfvJ $KEXEC.tar.xz &&
+cd $KEXEC &&
+if [ -f bootstrap ]
+then
+  ./bootstrap
+fi &&
+./configure && make &&
+cp -v build/sbin/kexec .. &&
+strip -s ../kexec

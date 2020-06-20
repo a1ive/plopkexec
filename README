@@ -1,0 +1,24 @@
+
+
+build.sh   - Automatic build script. This builds the 32 bit version. The 32 bit
+             version can run on 32 bit and 64 bit x86 computer.
+           
+build64.sh - Automatic build script. This builds the 64 bit version. The 64 bit
+             version can run only on 64 bit x86 computer. It also creates
+             the EFI version bootx64.efi that can be used as EFI boot manager.
+             Use the parameter "FB" to compile all frame buffer drivers
+             into PlopKexec.
+
+
+Directories:
+
+bin	- Prebuilt binary and iso
+busybox - BusyBox source code
+floppy  - PlopKexec 0.3 for floppy version
+iso	- Build iso
+kernel	- Linux kernel
+kexec	- Kexec source code
+src	- PlopKexec program source code
+
+
+
